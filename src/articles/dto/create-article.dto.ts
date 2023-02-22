@@ -12,6 +12,11 @@ export class CreateArticleDto {
     @ApiProperty()
     @IsString()
     @IsNotEmpty()
+    authorEmail: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsNotEmpty()
     @MinLength(5)
     title: string;
 
