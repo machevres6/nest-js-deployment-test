@@ -15,6 +15,9 @@ export class ArticleEntity implements Article {
     description: string | null;
 
     @ApiProperty()
+    authorEmail: string;
+
+    @ApiProperty()
     body: string;
 
     @ApiProperty()
