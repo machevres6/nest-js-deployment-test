@@ -6,12 +6,8 @@ name: NestJS Prod Migration
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "./prisma/**/*.*"
   pull_request:
     branches: [ "main" ]
-    paths: 
-      - "./prisma/**/*.*"
 
 jobs:
   build:
