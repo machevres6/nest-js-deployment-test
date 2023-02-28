@@ -3,8 +3,6 @@ name: NestJS Prod Migration
 on:
   push:
     branches: [ "Development" ]
-  # pull_request:
-  #   branches: [ "main" ]
 
 jobs:
   build:
