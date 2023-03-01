@@ -14,7 +14,7 @@ jobs:
 
       - name: Run tests
         run: |
-          npx jest --coverage --coverageReporters json-summary | tee ./coverage.txt
+          npx jest --coverage --coverageReporters json-summary text | tee ./coverage.txt
 
       # - name: Jest Coverage Comment
       #   id: coverageComment

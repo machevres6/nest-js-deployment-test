@@ -103,6 +103,13 @@
     "reporters": [
       "default",
       "jest-junit"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "cobertura"
     ]
   },
   "prisma": {
