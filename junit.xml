@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="2.141">
+  <testsuite name="AuthorsService" errors="0" failures="0" skipped="0" timestamp="2023-03-01T04:14:24" time="1.829" tests="6">
+    <testcase classname="AuthorsService should be defined" name="AuthorsService should be defined" time="0.007">
+    </testcase>
+    <testcase classname="AuthorsService getAll should return an array of authors" name="AuthorsService getAll should return an array of authors" time="0.002">
+    </testcase>
+    <testcase classname="AuthorsService getOne should get a single author" name="AuthorsService getOne should get a single author" time="0.002">
+    </testcase>
+    <testcase classname="AuthorsService update one should update a single author" name="AuthorsService update one should update a single author" time="0.001">
+    </testcase>
+    <testcase classname="AuthorsService create one should create a single author" name="AuthorsService create one should create a single author" time="0.002">
+    </testcase>
+    <testcase classname="AuthorsService delete one should delete a single author" name="AuthorsService delete one should delete a single author" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ArticlesService" errors="0" failures="0" skipped="0" timestamp="2023-03-01T04:14:24" time="1.921" tests="6">
+    <testcase classname="ArticlesService should be defined" name="ArticlesService should be defined" time="0.006">
+    </testcase>
+    <testcase classname="ArticlesService getAll Should return an array of articles" name="ArticlesService getAll Should return an array of articles" time="0.002">
+    </testcase>
+    <testcase classname="ArticlesService getOne should get a single author" name="ArticlesService getOne should get a single author" time="0.002">
+    </testcase>
+    <testcase classname="ArticlesService update one should update a single article" name="ArticlesService update one should update a single article" time="0.001">
+    </testcase>
+    <testcase classname="ArticlesService create one should create a single article" name="ArticlesService create one should create a single article" time="0.002">
+    </testcase>
+    <testcase classname="ArticlesService delete one should delete a single article" name="ArticlesService delete one should delete a single article" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Author Controller" errors="0" failures="0" skipped="0" timestamp="2023-03-01T04:14:24" time="1.956" tests="5">
+    <testcase classname="Author Controller should be defined" name="Author Controller should be defined" time="0.007">
+    </testcase>
+    <testcase classname="Author Controller get Authors should get an array of authors" name="Author Controller get Authors should get an array of authors" time="0.003">
+    </testcase>
+    <testcase classname="Author Controller getById should get a single Author" name="Author Controller getById should get a single Author" time="0.002">
+    </testcase>
+    <testcase classname="Author Controller new Author should create a new author" name="Author Controller new Author should create a new author" time="0.002">
+    </testcase>
+    <testcase classname="Author Controller update Author should update a Author" name="Author Controller update Author should update a Author" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles Controller" errors="0" failures="0" skipped="0" timestamp="2023-03-01T04:14:24" time="1.967" tests="5">
+    <testcase classname="Articles Controller should be defined" name="Articles Controller should be defined" time="0.008">
+    </testcase>
+    <testcase classname="Articles Controller get articles should get an array of articles" name="Articles Controller get articles should get an array of articles" time="0.004">
+    </testcase>
+    <testcase classname="Articles Controller getById should get a single Article" name="Articles Controller getById should get a single Article" time="0.002">
+    </testcase>
+    <testcase classname="Articles Controller new article should create a new article" name="Articles Controller new article should create a new article" time="0.001">
+    </testcase>
+    <testcase classname="Articles Controller update article should update a Article" name="Articles Controller update article should update a Article" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
