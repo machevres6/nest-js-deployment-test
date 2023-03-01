@@ -1,6 +1,4 @@
-# This workflow will install dependencies, create coverage tests and run Jest Coverage Comment
-# For more information see: https://github.com/MishaKav/jest-coverage-comment/
-name: Jest Coverage Comment
+name: Test Coverage Report
 on:
   pull_request:
 jobs:
@@ -16,30 +14,20 @@ jobs:
         run: |
           npx jest --coverage --coverageReporters json-summary text | tee ./coverage.txt
 
-      # - name: Jest Coverage Comment
-      #   id: coverageComment
-      #   uses: MishaKav/jest-coverage-comment@main
-      #   with:
-      #     hide-comment: true
-      #     coverage-summary-path: ./coverage/coverage-summary.json
-
       - name: Jest Coverage Comment
         uses: MishaKav/jest-coverage-comment@main
         with:
           coverage-summary-path: ./coverage/coverage-summary.json
-          title: My Jest Coverage Comment
-          summary-title: My Summary Title
+          title: Test Coverage Report
+          summary-title: Branch Test Summary
           badge-title: Coverage
           hide-comment: false
           create-new-comment: false
           hide-summary: false
-          junitxml-title: My JUnit Title
+          junitxml-title: Tests Report
           junitxml-path: junit.xml
-          coverage-title: My Coverage Title
+          coverage-title: Branch Test Coverage
           coverage-path: ./coverage.txt
-      
-      # - name: Jest Coverage Report
-      #   uses: ArtiomTr/jest-coverage-report-action@v2
 
 
 
