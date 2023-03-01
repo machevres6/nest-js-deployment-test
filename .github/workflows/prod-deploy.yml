@@ -1,47 +1,46 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: NestJS Prod Migration
+# name: NestJS Prod Migration
 
-on:
-  push:
-    branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
+# on:
+#   push:
+#     branches: [ "main" ]
 
-jobs:
-  build:
 
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+#     runs-on: ubuntu-latest
 
-    environment:
-      name: production
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+#     strategy:
+#       matrix:
+#         node-version: [16.x, 18.x]
+#         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+#     environment:
+#       name: production
+#     steps:
+#     - uses: actions/checkout@v3
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#         cache: 'npm'
+#     - run: npm ci
+#     - run: npm run build --if-present
     
-    - name: Deploy Prisma Migrations
-      run: npx prisma migrate deploy
-      env: 
-        DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
-    - name: Install Railway
-      run: npm i -g @railway/cli
+#     - name: Deploy Prisma Migrations
+#       run: npx prisma migrate deploy
+#       env: 
+#         DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+#     - name: Install Railway
+#       run: npm i -g @railway/cli
     
-    - name: Deploy
-      run: railway up
-      env: 
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_PROD }}
+#     - name: Deploy
+#       run: railway up
+#       env: 
+#         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_PROD }}
         
   
      
