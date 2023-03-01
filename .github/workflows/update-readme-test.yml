@@ -17,7 +17,7 @@ jobs:
 
       - name: Run tests
         run: |
-          npx jest --coverage --coverageReporters json-summary text | tee ./coverage.txt
+          npx jest --coverage --coverageReporters json-summary text html html-spa
 
       - name: Jest Coverage Comment
         if: github.ref == 'refs/heads/main'
