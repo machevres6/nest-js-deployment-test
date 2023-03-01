@@ -76,5 +76,28 @@ describe('AuthorsService', () => {
             expect(author).toEqual(oneAuthor);
         });
     });
+
+    describe('create one', () => {
+        it('should create a single author', async () => {
+            const author = await service.create({
+                name: authorName1,
+                email: authorEmail1,
+                hashedPassword: authorPassword1,
+            });
+            expect(author).toEqual(createAuthor);
+        });
+    });
+
+    describe('delete one', () => {
+        it('should delete a single author', async () => {
+            const author = await service.remove('a uuid');
+            expect(author).toEqual({
+                authorId,
+                name: authorName1,
+                email: authorEmail1,
+                hashedPassword: authorPassword1,
+            });
+        });
+    });
 });
 

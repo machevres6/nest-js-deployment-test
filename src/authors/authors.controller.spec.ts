@@ -10,7 +10,7 @@ const authorName = 'Test Cat 1';
 const authorEmail = 'author@email.com';
 const authorPassword = 'password';
 
-describe('Cat Controller', () => {
+describe('Author Controller', () => {
     let controller: AuthorsController;
     let service: AuthorsService;
 
