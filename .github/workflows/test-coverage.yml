@@ -7,12 +7,12 @@
 #     steps:
 #       - uses: actions/checkout@v3
 
-#       - name: Install dependencies
-#         run: npm ci
+      # - name: Install dependencies
+      #   run: npm ci
 
-#       - name: Run tests
-#         run: |
-#           npx jest --coverage --coverageReporters json-summary text | tee ./coverage.txt
+      # - name: Run tests
+      #   run: |
+      #     npx jest --coverage --coverageReporters json-summary text | tee ./coverage.txt
 
 #       - name: Jest Coverage Comment
 #         uses: MishaKav/jest-coverage-comment@main
